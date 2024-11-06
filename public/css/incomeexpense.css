@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+}
+
+
+
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6b6b;
+}
+
+/* Styling for the logo image */
+.logo-image {
+    height: 40px; /* Adjust size as needed */
+    width: 40px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ff6b6b;
+}
+
+/* Responsive navbar for mobile screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+}
+
+
+/* Header styling */
+.header-section {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    height: 20vh;
+    background-image: url('../images/expense.png');
+}
+
+.header-section h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Form styling */
+.form-section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff8f0;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h3 {
+    color: #b35a00;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #b35a00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #804000;
+}
+
+/* Modal overlay background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Make sure the modal appears on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+}
+
+/* Close button styling */
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: red;
+}
+
+/* Table styling in the modal */
+.modal-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.modal-content th, .modal-content td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .modal-content table, .modal-content th, .modal-content td {
+        display: block;
+    }
+
+    .modal-content th, .modal-content td {
+        text-align: left;
+    }
+
+    .modal-content th {
+        display: none;
+    }
+
+    .modal-content td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: inline-block;
+        width: 120px;
+        color: #333;
+    }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .form-section, .history-section {
+        margin: 10px;
+    }
+}
+
+/* Style for delete button */
+.delete-button {
+    color: #ff0000; /* Red color to indicate delete action */
+    cursor: pointer;
+    text-decoration: underline; /* Optional to make it look like a link */
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Add hover effect for delete button */
+.delete-button:hover {
+    color: #cc0000; /* Darker red on hover */
+}
